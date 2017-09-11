@@ -19,8 +19,7 @@ do
 			       sed "s/\o240/-/g"
 			)
 	OUTPUT_FILE_NAME=$(echo `printf %03d $COUNTER`-$CLEANED_NAME\.docx)
-	CLEANED_URL=$(echo $URL | sed "s/$//g")
-	pandoc -o $OUTPUT_FILE_NAME $CLEANED_URL
+	pandoc -o $OUTPUT_FILE_NAME $URL
     fi
 done < "$1"
 
