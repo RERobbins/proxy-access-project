@@ -8,7 +8,8 @@ do
     if [[ "$URL" == *"http"* ]]; then
 	let COUNTER=COUNTER+1
         CLEANED_NAME=$(echo $NAME | \
-			       sed "s/ *$\|[\.,\(\)]//g" | \
+			       sed "s/ *$//g" | \
+			       sed "s/[\.,\(\)]//g" | \
 			       sed "s/\o222//g" | \
 			       sed "s/\o77//g" | \
 			       sed "s/f\/k\/a/fka/g" | \
